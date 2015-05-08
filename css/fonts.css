@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'yekan';
+    src: url('fonts/weblogma_yekan/Weblogma_Yekan.eot');
+    src: url('fonts/weblogma_yekan/Weblogma_Yekan.eot#iefix') format('embedded-opentype'),
+         url('fonts/weblogma_yekan/Weblogma_Yekan.woff') format('woff'),
+         url('fonts/weblogma_yekan/Weblogma_Yekan.ttf') format('truetype'),
+         url('fonts/weblogma_yekan/Weblogma_Yekan.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'yekan-number';
+    src: url('fonts/nyekan/YekanNumbers.eot');
+    src: url('fonts/nyekan/YekanNumbers.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nyekan/YekanNumbers.woff') format('woff'),
+         url('fonts/nyekan/YekanNumbers.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nyekan';
+    src: url('fonts/nyekan/BYekan.eot');
+    src: url('fonts/nyekan/BYekan.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nyekan/BYekan.woff') format('woff'),
+         url('fonts/nyekan/BYekan.ttf') format('truetype'),
+         url('fonts/nyekan/BYekan.svg#nyekan') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/droidarabickufi/DroidKufi-Regular.eot');
+  src: url('fonts/droidarabickufi/DroidKufi-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/droidarabickufi/DroidKufi-Regular.woff2') format('woff2'),
+       url('fonts/droidarabickufi/DroidKufi-Regular.woff') format('woff'),
+       url('fonts/droidarabickufi/DroidKufi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/droidarabickufi/DroidKufi-Bold.eot');
+  src: url('fonts/droidarabickufi/DroidKufi-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/droidarabickufi/DroidKufi-Bold.woff2') format('woff2'),
+       url('fonts/droidarabickufi/DroidKufi-Bold.woff') format('woff'),
+       url('fonts/droidarabickufi/DroidKufi-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'sina';
+  src: url('fonts/sina.eot?#') format('eot'),  
+       url('fonts/sina.woff') format('woff'), 
+       url('fonts/sina.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'nmitra';
+    src: url('fonts/nmitra/MitraWeb-Regular.eot');
+    src: url('fonts/nmitra/MitraWeb-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/nmitra/MitraWeb-Regular.woff') format('woff'),
+         url('fonts/nmitra/MitraWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mj_free';
+    src: url('fonts/mj_free.eot');
+    src: url('fonts/mj_free.eot?#iefix') format('embedded-opentype'),
+         url('fonts/mj_free.woff') format('woff'),
+         url('fonts/mj_free.ttf') format('truetype'),
+         url('fonts/mj_free.svg#mj_free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'tulpen_oneregular';
+    src: url('fonts/tulpenone-regular-webfont.eot');
+    src: url('fonts/tulpenone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tulpenone-regular-webfont.woff') format('woff'),
+         url('fonts/tulpenone-regular-webfont.ttf') format('truetype'),
+         url('fonts/tulpenone-regular-webfont.svg#tulpen_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'damionregular';
+    src: url('fonts/damion-regular-webfont.eot');
+    src: url('fonts/damion-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/damion-regular-webfont.woff') format('woff'),
+         url('fonts/damion-regular-webfont.ttf') format('truetype'),
+         url('fonts/damion-regular-webfont.svg#damionregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "nassim";
+    src: url( "fonts/bbc-nassim-regular.eot" );
+    src: local( "☺" ), 
+    url( "fonts/bbc-nassim-regular.woff" ) format( "woff" ),
+    url( "fonts/bbc-nassim-regular.ttf" ) format( "truetype" );
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nassim";
+    src: url( "fonts/bbc-nassim-bold.eot" );
+    src: local( "☺" ), 
+    url( "fonts/bbc-nassim-bold.woff" ) format( "woff" ),
+    url( "fonts/bbc-nassim-bold.ttf" ) format( "truetype" );
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'dinar';
+    src: url('fonts/Dinar.eot');
+    src: url('fonts/Dinar.woff') format('woff'),
+         url('fonts/Dinar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: "myriad";
+    src: url( "fonts/MyriadArabic-Regular.eot"),
+    src: url( "fonts/MyriadArabic-Regular.eot?#iefix") format("embedded-opentype"),
+    src: local( "☺" ), 
+    url( "fonts/MyriadArabic-Regular.woff" ) format( "woff" ),
+    url( "fonts/MyriadArabic-Regular.ttf" ) format( "truetype" ),
+    url( "fonts/MyriadArabic-Regular.otf" ),
+    url( "fonts/MyriadArabic-Regular.svg#MyriadArabic-Regular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mitra';
+    src: url('fonts/BMitra.eot');
+    src: local('☺'), url('fonts/BMitra.woff') format('woff'), url('BMitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'koodak';
+    src: url('fonts/BKoodakBold.eot');
+    src: local('☺'), url('fonts/BKoodakBold.woff') format('woff'), url('BKoodakBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'titr';
+    src: url('fonts/BTitrBold.eot');
+    src: local('☺'), url('fonts/BTitrBold.woff') format('woff'), url('BTitrBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'zar';
+    src: url('fonts/BZar.eot');
+    src: local('☺'), url('fonts/BZar.woff') format('woff'), url('BZar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'titrtge';
+    src: url('fonts/BTitrTGEBold.eot');
+    src: local('☺'), url('fonts/BTitrTGEBold.woff') format('woff'), url('BTitrTGEBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'nazanin';
+    src: url('fonts/BNazanin.eot');
+    src: local('☺'), url('fonts/BNazanin.woff') format('woff'), url('BNazanin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'roya';
+    src: url('fonts/BRoya.eot');
+    src: local('☺'), url('fonts/BRoya.woff') format('woff'), url('BRoya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'farsi';
+    src: url('fonts/DINNextLTArabic-Light.eot');
+    src: local('☺'), url('fonts/DINNextLTArabic-Light.woff') format('woff'), url('fonts/DINNextLTArabic-Light.ttf') format('truetype'), url('fonts/DINNextLTArabic-Light.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'bree';
+    src: url('fonts/BreeSerif-Regular-webfont.eot');
+    src: url('fonts/BreeSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BreeSerif-Regular-webfont.woff') format('woff'),
+         url('fonts/BreeSerif-Regular-webfont.ttf') format('truetype'),
+         url('fonts/BreeSerif-Regular-webfont.svg#BreeSerifRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'english2';
+    src: url('fonts/223EE6_2_0.eot');
+    src: local('?'), url('fonts/223EE6_2_0.woff') format('woff'), url('fonts/223EE6_2_0.ttf') format('truetype'), url('fonts/223EE6_2_0.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('fonts/BEBAS___-webfont.eot');
+    src: url('fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BEBAS___-webfont.woff') format('woff'),
+         url('fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face{font-family:'english-light';
+src:url('fonts/latest.eot');src:local("Segoe UI Light"),local("Segoe WP Light"),
+url('fonts/latest.eot?#iefix') format('embedded-opentype'),
+url('fonts/latest.woff') format('woff'),
+url('fonts/latest.ttf') format('truetype'),
+url('fonts/latest.svg#web') format('svg');
+font-weight:normal;font-style:normal;
+line-height:150%;
+}
+@font-face{font-family:'english';
+src:url('fonts/latest_2.eot');src:local("Segoe UI"),local("Segoe"),local("Segoe WP"),
+url('fonts/latest_2.eot?#iefix') format('embedded-opentype'),
+url('fonts/latest_2.woff') format('woff'),
+url('fonts/latest_2.ttf') format('truetype'),
+url('fonts/latest_2.svg#web') format('svg');font-weight:normal;font-style:normal;
+line-height:150%;}
