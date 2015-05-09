@@ -1,11 +1,11 @@
-CREATE TABLE permission(
+CREATE TABLE pd_permission(
 permissionId  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 permissionName   VARCHAR( 70 ) NOT NULL,
 PRIMARY KEY ( permissionId )
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE user(
+CREATE TABLE pd_user(
 userid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 username    VARCHAR( 30 )             NOT NULL,
 password CHAR(40) NOT NULL,
@@ -24,53 +24,53 @@ PRIMARY KEY ( userid  )
 
 
 
-CREATE TABLE userpermission(
+CREATE TABLE pd_userpermission(
 userpermissionId  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 userid             MEDIUMINT  UNSIGNED          NOT NULL,
 permissionid       MEDIUMINT   UNSIGNED         NOT NULL,
 PRIMARY KEY ( userpermissionid  ),
-FOREIGN KEY (userid) REFERENCES user(userid) ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY (permissionid) REFERENCES permission(permissionid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (userid) REFERENCES pd_user(userid) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (permissionid) REFERENCES pd_permission(permissionid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE groups(
+CREATE TABLE pd_groups(
 groupid  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 groupname    VARCHAR( 50 )                NOT NULL,
 PRIMARY KEY (groupid)
 )DEFAULT CHARSET=utf8;
 
-CREATE TABLE grouppermission(
+CREATE TABLE pd_grouppermission(
 grouppermissionid  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 groupid              MEDIUMINT   UNSIGNED         NOT NULL, 
 permissionid         MEDIUMINT    UNSIGNED        NOT NULL, 
 PRIMARY KEY (grouppermissionid),
-FOREIGN KEY (permissionid) REFERENCES permission(permissionid) ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY (groupid) REFERENCES groups(groupid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (permissionid) REFERENCES pd_permission(permissionid) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (groupid) REFERENCES pd_groups(groupid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
 
-CREATE TABLE title(
+CREATE TABLE pd_title(
 titleid  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 title VARCHAR( 500 ) NOT NULL ,
 groupid MEDIUMINT UNSIGNED NOT NULL ,
 PRIMARY KEY ( titleid ),
-FOREIGN KEY (groupid) REFERENCES groups(groupid)  ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (groupid) REFERENCES pd_groups(groupid)  ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE usertitle(
+CREATE TABLE pd_usertitle(
 usertitleid  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 userid       MEDIUMINT  UNSIGNED           NOT NULL,
 titleid MEDIUMINT   UNSIGNED            NOT NULL ,
 PRIMARY KEY (usertitleid),
-FOREIGN KEY (titleid) REFERENCES title(titleid) ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY (userid) REFERENCES user(userid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (titleid) REFERENCES pd_title(titleid) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (userid) REFERENCES pd_user(userid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE letter(
+CREATE TABLE pd_letter(
 letterid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 usertitle      MEDIUMINT  UNSIGNED          NOT NULL,
 userid         MEDIUMINT   UNSIGNED           NOT NULL,
@@ -87,12 +87,12 @@ status         VARCHAR( 30 )                NOT NULL,
 hasattachment  VARCHAR( 10 )				NOT NULL,
 eghdam         VARCHAR( 30 )                NOT NULL,
 PRIMARY KEY (letterid),
-FOREIGN KEY (usertitle) REFERENCES title(titleid) ON DELETE CASCADE ON UPDATE CASCADE ,
-FOREIGN KEY (userid) REFERENCES user(userid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (usertitle) REFERENCES pd_title(titleid) ON DELETE CASCADE ON UPDATE CASCADE ,
+FOREIGN KEY (userid) REFERENCES pd_user(userid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE receivers(
+CREATE TABLE pd_receivers(
 receiverid  MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 userid        MEDIUMINT   UNSIGNED        NOT NULL,
 titleid        MEDIUMINT   UNSIGNED        NOT NULL,
@@ -106,23 +106,23 @@ recipes			VARCHAR( 1000 ) ,
 delivery_date	VARCHAR( 40 ) NOT NULL,
 delivery_date_seconds	VARCHAR( 40 )  NULL,
 PRIMARY KEY (receiverid),
-FOREIGN KEY (userid) REFERENCES user(userid) ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY (titleid) REFERENCES title(titleid) ON DELETE CASCADE ON UPDATE CASCADE,
-FOREIGN KEY (letterid) REFERENCES letter(letterid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (userid) REFERENCES pd_user(userid) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (titleid) REFERENCES pd_title(titleid) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (letterid) REFERENCES pd_letter(letterid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
 
-CREATE TABLE attachment(
+CREATE TABLE pd_attachment(
 attachmentid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 letterid         MEDIUMINT  UNSIGNED          NOT NULL,
 filename         VARCHAR( 300 )                NOT NULL,
 address          VARCHAR( 500 )                NOT NULL,
 filesize         VARCHAR( 30 )                NOT NULL,
 PRIMARY KEY (attachmentid),
-FOREIGN KEY (letterid) REFERENCES letter(letterid) ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (letterid) REFERENCES pd_letter(letterid) ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
 
-CREATE TABLE options(
+CREATE TABLE pd_options(
 optionid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 option_name  VARCHAR( 200 ) NOT NULL,   
 option_value  VARCHAR( 200 )  NOT NULL,
@@ -146,7 +146,7 @@ successor : not-select
 ---------------------------------
 
 
-CREATE TABLE contact(
+CREATE TABLE pd_contact(
 contactid MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
 userid MEDIUMINT UNSIGNED NOT NULL,
 firstname VARCHAR(500) NOT NULL,
@@ -158,5 +158,5 @@ address VARCHAR(600),
 groups VARCHAR(30) NOT NULL,
 shared BINARY NOT NULL,         
 PRIMARY KEY (contactid) ,
-FOREIGN KEY (userid) REFERENCES user(userid)  ON DELETE CASCADE ON UPDATE CASCADE
+FOREIGN KEY (userid) REFERENCES pd_user(userid)  ON DELETE CASCADE ON UPDATE CASCADE
 )DEFAULT CHARSET=utf8;
